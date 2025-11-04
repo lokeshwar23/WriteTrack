@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write-Track - Task and Blog Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .feature {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Write-Track</h1>
+        <p>Task and Blog Management System</p>
+    </div>
+
+    <div class="section">
+        <h2>Welcome</h2>
+        <p>Manage your tasks and create engaging blog posts with our comprehensive system.</p>
+        <a href="/api/auth/login" class="btn">Login</a>
+        <a href="/api/auth/register" class="btn">Register</a>
+    </div>
+
+    <div class="section">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Task Management</h3>
+                <p>Create, update, and track your tasks efficiently.</p>
+                <a href="/tasks" class="btn">View Tasks</a>
+            </div>
+            <div class="feature">
+                <h3>Blog System</h3>
+                <p>Write and manage your blog posts with rich content.</p>
+                <a href="/blog" class="btn">View Blog</a>
+            </div>
+            <div class="feature">
+                <h3>Dashboard</h3>
+                <p>Get an overview of your activities and progress.</p>
+                <a href="/dashboard" class="btn">View Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>API Endpoints</h2>
+        <p>Access our REST API for programmatic access:</p>
+        <ul>
+            <li><strong>Authentication:</strong> /api/auth</li>
+            <li><strong>Tasks:</strong> /api/tasks</li>
+            <li><strong>Blog Posts:</strong> /api/posts</li>
+            <li><strong>Users:</strong> /api/users</li>
+            <li><strong>Dashboard:</strong> /api/dashboard</li>
+        </ul>
+    </div>
+</body>
+</html>
