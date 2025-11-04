@@ -31,19 +31,39 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // CORS configuration
-app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? 'https://writetrack-1.onrender.com'
-    : 'http://localhost:5173',
-  credentials: true
-}));
+// ✅ CORS configuration
+const allowedOrigins = [
+  "http://localhost:5173", // local dev
+  "https://write-track.vercel.app", // production frontend
+  "https://writetrack-1.onrender.com", // old backend
+  "https://writetrack-zwxc.onrender.com" // current backend
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin) || origin.endsWith(".onrender.com")) {
+        callback(null, true);
+      } else {
+        console.error("❌ Blocked by CORS:", origin);
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+  })
+);
+
+// ✅ Handle preflight requests globally
+app.options("*", cors());
 
 // Static files for images
 app.use('/images', express.static('upload/images'));
 
 // API status route
 app.get("/", (req, res) => {
-  res.send("WriteTrack API is running ");
+  res.send("WriteTrack API is running 🚀");
 });
 
 // Image upload route
