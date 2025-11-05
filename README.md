@@ -67,13 +67,13 @@ It’s designed for simplicity, creativity, and productivity — perfect for wri
 
 ### Create a .env file inside the backend folder:
 
--PORT=5000
--MONGO_URI=your_mongodb_connection_string
--JWT_SECRET=your_secret_key
+- PORT=5000
+- MONGO_URI=your_mongodb_connection_string
+- JWT_SECRET=your_secret_key
 
 ### Create a .env file inside the client folder:
 
--VITE_API_URL=http://localhost:5000/api
+- VITE_API_URL=http://localhost:5000/api
 
 ---
 
