@@ -1,13 +1,13 @@
-📝 Write-Track – Full Stack Productivity & Blogging Platform (MERN Stack)
+### Write-Track – Full Stack Productivity & Blogging Platform (MERN Stack)
 
-🌟 Overview
+### 🌟 Overview
 Write-Track is a full-stack productivity and blogging web application built using the **MERN Stack** — MongoDB, Express.js, React.js, and Node.js.  
 It helps users **write blogs, manage daily tasks, and track personal growth** — all in one intuitive platform.  
 
 The project includes **secure user authentication, blog management, task tracking**, and a **personal dashboard**.  
 It’s designed for simplicity, creativity, and productivity — perfect for writers, students, and professionals.
 
-🚀 Live Demo
+### 🚀 Live Demo
 | Component | Link |
 |------------|------|
 | 🖥️ Frontend (React App) | [https://write-track.vercel.app/] |
@@ -15,7 +15,7 @@ It’s designed for simplicity, creativity, and productivity — perfect for wri
 
 ---
 
-📌 Features
+### 📌 Features
 
 ✅ **User Features**
 -  Create, edit, and delete blog posts  
@@ -48,7 +48,7 @@ It’s designed for simplicity, creativity, and productivity — perfect for wri
 
 ---
 
-🛠️ Tech Stack
+### 🛠️ Tech Stack
 
 🖥️ **Frontend**
 - React.js (Vite)
@@ -65,20 +65,22 @@ It’s designed for simplicity, creativity, and productivity — perfect for wri
 
 ---
 
-**Create a .env file inside the backend folder:**
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+### Create a .env file inside the backend folder:
 
-**Create a .env file inside the client folder:**
-VITE_API_URL=http://localhost:5000/api
+-PORT=5000
+-MONGO_URI=your_mongodb_connection_string
+-JWT_SECRET=your_secret_key
+
+### Create a .env file inside the client folder:
+
+-VITE_API_URL=http://localhost:5000/api
 
 ---
 
 
-🎯 Installation & Setup (Local Development)
+### Installation & Setup (Local Development)
 
-### 1. Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/your-username/Write-Track.git
 cd Write-Track
